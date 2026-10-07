@@ -1,0 +1,98 @@
+.mobileBar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);
+  background: var(--color-white);
+  border-top: 1px solid var(--color-gray-100);
+  box-shadow: 0 -4px 12px rgba(10, 22, 40, 0.08);
+  height: var(--mobile-bar-height);
+  padding: var(--space-2) var(--space-4);
+}
+
+.mobileBarInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  gap: var(--space-2);
+}
+
+.mobileBarBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  flex: 1;
+  min-width: 0;
+}
+
+.mobileBarBtn:active {
+  transform: scale(0.95);
+}
+
+.mobileBarIcon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileBarLabel {
+  font-size: 0.65rem;
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* Call button */
+.btnCall {
+  color: #E63946; /* Red for phone */
+}
+
+.btnCall:hover {
+  background: rgba(230, 57, 70, 0.05);
+}
+
+/* WhatsApp button */
+.btnWhatsapp {
+  color: #25D366;
+}
+
+.btnWhatsapp:hover {
+  background: #e6f9ed;
+}
+
+/* Reservation button - primary */
+.btnReservation {
+  background: #7A1F3D;
+  color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2) var(--space-4);
+  flex: 1.5;
+}
+
+.btnReservation:hover {
+  opacity: 0.9;
+}
+
+.btnReservation .mobileBarIcon {
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .mobileBar {
+    display: block;
+  }
+}
